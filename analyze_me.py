@@ -22,8 +22,7 @@ def process_data(values: list = []):  # mutable default argument (bug/code smell
     # manejo de errores demasiado amplio (code smell)
     try:
         data = json.loads('{"ok": true}')
-    except:
-        pass                         # swallowing exceptions (code smell)
+                           # swallowing exceptions (code smell)
 
     return total
 
@@ -86,10 +85,10 @@ def mixed_concerns(a, b, c, d, e, f, g, h, i, j):
     return result
 
 
-def shadowing_example(value):
+def shadowing_example(otroValor):
     total = 0
-    for value in range(3):   # sombreado de variable (shadowing)
-        total += value
+    for otroValor in range(3):   # sombreado de variable (shadowing)
+        total += otroValor
     return total
 
 
