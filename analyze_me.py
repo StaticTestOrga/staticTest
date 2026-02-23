@@ -16,7 +16,7 @@ def process_data(values: list = []):  # mutable default argument (bug/code smell
             flag = False             # variable asignada pero nunca usada
         if values[i] > 10:
             total = total + values[i]
-        if False:
+        if flag == False:
             print("nunca se ejecuta")  # unreachable (dead code)
 
     # manejo de errores demasiado amplio (code smell)
